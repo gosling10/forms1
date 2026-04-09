@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form__item{
+    margin: 10px 0;
+}
+.form__label{
+    color: rgb(0, 0, 0);
+}
+.form__field{
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 7px;
+    color: black;
+    background-color: rgb(199, 123, 123);
+    transition: outline 0.3s, outline-offset 0.3s, background 0.3s;
+}
+.form__btn{
+    background-color: rgb(124, 21, 21);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.form__field:hover,
+.form__field:focus {
+    outline: 1px solid rgb(34, 161, 178);
+    outline-offset: 3px;
+    background-color: gray;
+}
+.form__btn:hover,
+.form__btn:focus {
+    background-color: black;
+    color: bisque;
+    outline: 1px solid brown;
+    outline-offset: 3px;
+}
+.form__field:disabled{
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+.form__field:disabled:hover,
+.form__field:disabled:focus{
+    outline: none;
+    background-color: rgb(134, 103, 103) ;
+}
+.form__btn:disabled:hover,
+.form__btn:disabled:focus{
+    background-color: black;
+    outline: none;
+}
+.form__field:user-valid{
+    border: 1px solid rgb(0, 197, 0);
+    background-color: forestgreen;
+}
+.form__field:user-invalid{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(105, 2, 2);
+}
+.form__item:has(.form__field:user-invalid)::after{
+    content: "обязательное заполнение";
+}
+.box{
+    margin-left: 20px;
+}
+.filter-color{
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+}
+.filter-color__item{
+    flex-shrink: 0;
+}
+.filter-color__checkbox{
+    display: none;
+}
+.filter-color__label{
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    outline: 0px solid gray;
+    outline-offset: 0px;
+    transition: outline 0.2s, outline-offset 0.2s;
+}
+.filter-color__label:hover,
+.filter-color__label:focus{
+    outline: gray 2px solid;
+    outline-offset: 3px;
+    cursor: pointer;
+}
+.filter-color__checkbox:checked+.filter-color__label{
+    outline: gray 2px solid;
+    outline-offset: 3px;
+}
+.filter-color__label::after{
+    content: "";
+    transition: transform 0.2s;
+}
+.filter-color__checkbox:checked+.filter-color__label::after{
+    content: "\F272";
+    font-family: "bootstrap-icons";
+    color: rgb(0, 0, 0);
+    transform: scale(2);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

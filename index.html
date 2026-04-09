@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="">
+        <div class="form__item">
+            <div>
+                <label for="login" class="form__label">Введите логин</label>
+            </div>
+            <div>
+                <input type="text" id="login" class="form__field" required>
+            </div>
+        </div>
+        <div class="form__item">
+            <div>
+                <label for="email" class="form__label">Введите email</label>
+            </div>
+            <div>
+                <input type="text" id="email" class="form__field" required>
+            </div>
+        </div>
+        <div class="form__item">
+            <div>
+                <label for="password" class="form__label">Введите пароль</label>
+            </div>
+            <div>
+                <input type="password" id="password" class="form__field" required>
+            </div>
+        </div>
+        <div class="form__item">
+            <input type="submit" id="login" class="form__btn">
+        </div>
+    </form>
+    <div class="box">
+        <h3>Цвет</h3>
+        <div class="filter-color">
+            <div class="filter-color__item">
+                <input class="filter-color__checkbox" type="checkbox" name="color-red" id="color-red">
+                <label class="filter-color__label" for="color-red" aria-label="красный цвет" style="background-color: red;"></label>
+            </div>
+            <div class="filter-color__item">
+                <input class="filter-color__checkbox" type="checkbox" name="color-green" id="color-green">
+                <label class="filter-color__label" for="color-green" aria-label="зеленый цвет" style="background-color: green;"></label>
+            </div>
+            <div class="filter-color__item">
+                <input class="filter-color__checkbox" type="checkbox" name="color-blue" id="color-blue">
+                <label class="filter-color__label" for="color-blue" aria-label="синий цвет" style="background-color: blue;"></label>
+            </div>
+            <div class="filter-color__item">
+                <input class="filter-color__checkbox" type="checkbox" name="color-yellow" id="color-yellow">
+                <label class="filter-color__label" for="color-yellow" aria-label="желтый цвет" style="background-color: yellow;"></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
